@@ -21,7 +21,7 @@ public class CategoryRepositoryTest {
     private CategoryRepository repository;
 	@Test
     public void findByTitleShouldReturnCategory() {
-    	List<Category> categories = repository.findByCategory("Detective");
+    	List<Category> categories = repository.findByName("Detective");
     	assertThat(categories).hasSize(1);
     	assertThat(categories.get(0).getName()).isEqualTo("Detective");
     	}

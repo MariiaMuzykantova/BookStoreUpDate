@@ -18,14 +18,14 @@ public class UserRepositoryTest {
 	@Autowired
     private UserRepository repository;
 	@Test
-    public void findByUserNameShouldReturnUser() {
-    	User users = repository.findByUserName("user");
+    public void findByUsernameShouldReturnUser() {
+    	User users = repository.findByUsername("user");
     	assertThat(users.getUsername()).isEqualTo("user");
     	}
     
     @Test
     public void createNewBook() {
-    	User user = new User("user", "$2a$04$VxgMarTlFX3pXMe86d./qOjRDZUXMCexbLliXFfneiC3umc/yWPpC", "USER");
+    	User user = new User("masha", "$2a$04$VxgMarTlFX3pXMe86d./qOjRDZUXMCexbLliXFfneiC3umc/yWPpC", "USER");
     	repository.save(user);
     	assertThat(user.getId()).isNotNull();
     }
